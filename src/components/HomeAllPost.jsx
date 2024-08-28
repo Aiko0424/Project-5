@@ -1,7 +1,8 @@
-import Image from "next/image";
-import BlogCard from "../components/BlogCard";
+"use client";
 
-export default function HomeAllpost() {
+import { Card } from "./Card";
+
+export const HomeAllpost = ({ posts }) => {
   return (
     <div className="flex flex-col items-center justify-center mt-[100px]">
       <div className="flex-col justify-start items-center gap-8 inline-flex">
@@ -36,8 +37,15 @@ export default function HomeAllpost() {
             </div>
           </div>
         </div>
-        <div className="flex gap-5">
-          <BlogCard />
+        <div className="flex flex-wrap w-[1230px] justify-between gap-5">
+          {posts.map((el, index) => (
+            <Card
+              key={index}
+              title={el.title}
+              date={el.published_at}
+              img={el.cover_image}
+            />
+          ))}
         </div>
       </div>
 
@@ -49,4 +57,4 @@ export default function HomeAllpost() {
       </div>
     </div>
   );
-}
+};

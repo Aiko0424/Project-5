@@ -1,14 +1,17 @@
 import Image from "next/image";
 import HomeSlider from "../components/HomeSlider";
 import HomeTrending from "../components/HomeTrending";
-import HomeAllPost from "../components/HomeAllPost";
+import { HomeAllpost } from "@/components/HomeAllPost";
 
-export default function Home() {
+export default async function Home() {
+  const result = await fetch("https://dev.to/api/articles");
+  const objResult = await result.json();
+
   return (
     <>
       <HomeSlider />
       <HomeTrending />
-      <HomeAllPost />
+      <HomeAllpost posts={objResult} />
     </>
   );
 }
