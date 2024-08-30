@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="flex flex-col w-screen h-[495px] bg-[#F6F6F7] justify-center items-center">
+    <footer className="flex flex-col w-screen h-[495px] bg-[#F6F6F7] justify-center items-center mt-[80px]">
       <div className="flex items-center w-[1215px] h-[236px] gap-y-5">
         {/* About */}
         <div className="flex items-center w-[289px] h-[236px]">
@@ -31,18 +31,32 @@ export const Footer = () => {
         {/* Pages */}
         <div className="flex justify-center text-sm items-start h-[236px] w-[521px] mr-5">
           <div className="flex flex-col gap-2">
-            <span className="text-[#3b3c4a]">Home</span>
-            <span className="text-[#3b3c4a]">Blog</span>
-            <span className="text-[#3b3c4a]">Contact</span>
+            <Link href="/">
+              <span className="text-[#3b3c4a]">Home</span>
+            </Link>
+            <Link href="/blog">
+              <span className="text-[#3b3c4a]">Blog</span>
+            </Link>
+            <Link href="contact">
+              <span className="text-[#3b3c4a]">Contact</span>
+            </Link>
           </div>
         </div>
 
         {/* Icons */}
         <div className="flex gap-[26px] justify-center items-start h-[236px]">
-          <img src="/Facebook-icon.png" className="w-4 h-4" alt="" />
-          <img src="Twitter-icon.png" className="w-4 h-4" alt="" />
-          <img src="Instagram-icon.png" className="w-4 h-4" alt="" />
-          <img src="Linkedin-icon.png" className="w-4 h-4" alt="" />
+          <a href="https://www.facebook.com/">
+            <img src="/Facebook-icon.png" className="w-4 h-4" alt="" />
+          </a>
+          <a href="https://www.twitter.com/">
+            <img src="Twitter-icon.png" className="w-4 h-4" alt="" />
+          </a>
+          <a href="https://www.instagram.com/">
+            <img src="Instagram-icon.png" className="w-4 h-4" alt="" />
+          </a>
+          <a href="https://www.linkedin.com/">
+            <img src="Linkedin-icon.png" className="w-4 h-4" alt="" />
+          </a>
         </div>
       </div>
 
@@ -53,17 +67,23 @@ export const Footer = () => {
       <div className="flex justify-between items-center w-[1215px] py-5">
         <img src="/Copyright-logo.png" className="w-[231px] h-[54px]" alt="" />
         <div className="flex gap-4">
-          <span className="flex items-center text-base justify-center text-[#3B3C4A]">
-            Terms of Use
-          </span>
+          <a href="">
+            <span className="flex items-center text-base justify-center text-[#3B3C4A]">
+              Terms of Use
+            </span>
+          </a>
           <hr className="w-[1px] h-[24px] bg-gray-300 flex items-center justify-center" />
-          <span className="flex items-center text-base justify-center text-[#3B3C4A]">
-            Privacy Policy
-          </span>
+          <a href="">
+            <span className="flex items-center text-base justify-center text-[#3B3C4A]">
+              Privacy Policy
+            </span>
+          </a>
           <hr className="w-[1px] h-[24px] text-base bg-gray-300 flex items-center justify-center" />
-          <span className="flex items-center justify-center text-[#3B3C4A]">
-            Cookie Policy
-          </span>
+          <a href="">
+            <span className="flex items-center justify-center text-[#3B3C4A]">
+              Cookie Policy
+            </span>
+          </a>
         </div>
       </div>
     </footer>

@@ -6,15 +6,15 @@ export const Header = () => {
   return (
     <header className="flex items-center justify-center">
       <div className="flex justify-between py-8 w-[1130px]">
-        <img
-          src="/Metablog-Logo.png"
-          className="w-[138px] h-[36px]"
-          alt="Metablog logo"
-        />
+        <Link href="/">
+          <img
+            src="/Metablog-Logo.png"
+            className="w-[138px] h-[36px] cursor-pointer"
+            alt="Metablog logo"
+          />
+        </Link>
         <div className="gap-10 flex items-center">
-          <Link className="#3b" href="/">
-            Home
-          </Link>
+          <Link href="/">Home</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/contact">Contact</Link>
         </div>

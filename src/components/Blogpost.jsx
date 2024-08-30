@@ -53,7 +53,7 @@ export const HomeAllpost = ({ posts }) => {
                 key={index}
                 title={el.title}
                 date={el.published_at}
-                img={el.cover_image}
+                img={user.cover_image}
               />
             </Link>
           ))}
