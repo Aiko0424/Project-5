@@ -62,7 +62,7 @@ export const HomeAllpost = ({ posts }) => {
 
       {/* button */}
       <div
-        onClick={() => setSliceCount((prev) => prev + 9)}
+        onClick={() => setSliceCount((prev) => prev + 3)}
         className={`h-12 px-5 py-3 rounded-md border border-[#696a75]/30 justify-center items-center gap-3 inline-flex mb-[100px] cursor-pointer bg-transparent text-[#696a75] hover:bg-gray-500 hover:text-white ${
           sliceCount >= posts.length && "hidden"
         }`}

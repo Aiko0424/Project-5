@@ -14,9 +14,15 @@ export const Header = () => {
           />
         </Link>
         <div className="gap-10 flex items-center">
-          <Link href="/">Home</Link>
-          <Link href="/blog">Blog</Link>
-          <Link href="/contact">Contact</Link>
+          <Link className="hover:text-[#d4a373]" href="/">
+            Home
+          </Link>
+          <Link className="hover:text-[#d4a373]" href="/blog">
+            Blog
+          </Link>
+          <Link className="hover:text-[#d4a373]" href="/contact">
+            Contact
+          </Link>
         </div>
 
         <div className="relative h-[36px] flex items-center justify-center bg-[#F4F4F5] p-2 rounded-[5px]">
