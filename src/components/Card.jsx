@@ -1,5 +1,15 @@
 "use client";
 
+// Utility function to format the date
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+};
+
 export const Card = ({ title, date, img }) => {
   return (
     <div className="justify-start items-start gap-5">
@@ -18,7 +28,7 @@ export const Card = ({ title, date, img }) => {
           </div>
           <div className="justify-start items-center gap-5 inline-flex">
             <div className="text-[#97989f] text-base font-normal font-['Work Sans'] leading-normal">
-              {date.split("T")[0]}
+              {formatDate(date.split("T")[0])}
             </div>
           </div>
         </div>

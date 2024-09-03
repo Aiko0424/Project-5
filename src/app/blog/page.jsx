@@ -1,4 +1,4 @@
-import Blogpost from "@/components/Blogpost";
+import { BlogAllPost } from "@/components/BlogAllPost";
 import React from "react";
 
 const Blog = async () => {
@@ -7,7 +7,7 @@ const Blog = async () => {
 
   return (
     <div>
-      <Blogpost posts={objResult} />
+      <BlogAllPost posts={objResult} />
     </div>
   );
 };

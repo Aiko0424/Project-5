@@ -5,10 +5,8 @@ const SinglePost = async ({ params }) => {
   const { id } = params;
   const Data = await fetch(`https://dev.to/api/articles/${id}`);
   const result = await Data.json();
-  return (
-    <div>
-      <Single result={result} />
-    </div>
-  );
+  console.log(result);
+
+  return <Single result={result} />;
 };
 export default SinglePost;
